@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import React, { Component } from 'react'
+// import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch, NavLink } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import MemberPage from './pages/MemberPage'
+import MemberList from './pages/MemberList'
+import Header from './containers/Header'
+import NavBar from './components/NavBar';
+import Footer from './containers/Footer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const link = {
+  width: '100px',
+  padding: '12px',
+  margin: '0 6px 6px',
+  background: 'blue',
+  textDecoration: 'none',
+  color: 'white',
+}
+
+class App extends Component {
+  render() 
+    {
+      return (
+        <>
+        <Header />
+        <NavBar />
+        <Switch>
+          <Route exact path='/' component={HomePage} className="content"/>
+          <Route exact path='/members/:id' component={MemberPage} />
+          <Route exact path='/members' component={MemberList} />
+        </Switch>
+        <Footer />
+        <div className="App">
+          <header className="sticky" />
+        </div>
+        </>
+      );}
+
+    
 }
 
 export default App;

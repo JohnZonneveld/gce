@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+div.noPadding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+div.noMargin {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+div.logoMargin {
+  margin-top: 10px;
+}
+
+.fixed-bottom {
+  
+  Display: flex;
+  Justify-Content: center; 
+  margin-top: 1rem;
+  padding: 1rem;
+  /* background-color: rgb(235, 195, 64); */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.body {
+  padding-top: 10px;
+  max-height: 450px;
+  overflow-y: scroll;
+}
+
+.NavBar {
+  padding-top: 20px;
+}

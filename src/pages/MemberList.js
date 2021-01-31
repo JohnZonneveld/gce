@@ -1,19 +1,29 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { connect } from 'react-redux'
 
 // import { useParams } from 'react-router-dom';
 
-export default function MemberList() {
+class MemberList extends Component {
 
-    return (
+    membersList = () => {
+        return this.props.members.map(
 
-        <>
-
-            <h1>These are the Members of the Board</h1>
-
-            <p>Board members listing</p>
-
-        </>
-
-    );
+            member => {
+                <div>
+                    <p>{member.name}</p>
+                </div>
+            }
+                
+        )
+    }
+    render() {
+        return (
+            <div>
+                {}
+            </div>
+        )
+    }
 
 }
+
+export default MemberList

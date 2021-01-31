@@ -15,7 +15,7 @@ const link = {
 class NavBar extends React.Component {
   render() {
     return (
-      <div class="Navbar">
+      <div className="Navbar">
         <NavLink
           to="/"
           /* set exact so it knows to only set activeStyle when route is deeply equal to link */

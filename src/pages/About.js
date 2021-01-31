@@ -12,7 +12,7 @@ export default function About() {
                 The club was founded in november 1st 2001 and we are a no cost and
                 volunteer group!!!
             </p>
-            <p>
+            <div>
                 We promote:
                 <ul>
                     <li>Comraderie</li>
@@ -21,7 +21,7 @@ export default function About() {
                     <li>Tips about accessories</li>
                     <li>Rallies where GTR owners can meet</li>
                 </ul> 
-            </p>
+            </div>
         </div>
 
     );

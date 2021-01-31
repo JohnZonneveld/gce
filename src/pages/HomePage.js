@@ -4,7 +4,7 @@ export default function HomePage() {
 
     return (
         
-        <div className="body">
+        <div className="content">
 
             <h1>Hey from HomePage</h1>
 

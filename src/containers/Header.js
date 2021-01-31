@@ -10,7 +10,7 @@ function Header() {
     return (
         <Container fluid className="noPadding">
         <Row >
-            <Col ><GtrFront /></Col>
+            <Col ClassName="logoLeft"><GtrFront /></Col>
             <Col className="logoMargin"><Logo /></Col>
             <Col>counter</Col>
         </Row>

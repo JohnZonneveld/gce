@@ -43,6 +43,14 @@ class NavBar extends React.Component {
             background: 'darkgreen'
           }}
         >Members</NavLink>
+        <NavLink
+          to="/events"
+          exact
+          style={link}
+          activeStyle={{
+            background: 'darkgreen'
+          }}
+        >Events</NavLink>
       </div>
     )
   }

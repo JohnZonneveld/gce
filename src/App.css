@@ -40,6 +40,7 @@
 div.noPadding {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 10px;
 }
 
 div.noMargin {
@@ -64,7 +65,8 @@ div.logoMargin {
   width: 100%;
 }
 
-.body {
+.content {
+  margin-left: 40px;
   padding-top: 10px;
   max-height: 450px;
   overflow-y: scroll;
@@ -72,4 +74,8 @@ div.logoMargin {
 
 .NavBar {
   padding-top: 20px;
+}
+
+h1 {
+  color: #2F9B30;
 }

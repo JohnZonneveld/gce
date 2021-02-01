@@ -1,18 +1,20 @@
 import React from 'react';
-
+import { connect } from 'react-redux'
 import { useParams } from 'react-router-dom';
 
-export default function MemberPage() {
+function MemberPage() {
 
     let { id } = useParams();
-
+    // let member  = this.props.members.find(member => (member.id === id))
+    console.log(this.props.members)
     return (
 
         <>
+            <h1>Member Info {id}</h1>
+            
+            {/* Name: {member.name} */}
 
-            <h1>Hello there user {id}</h1>
-
-            <p>This is your awesome User Profile page</p>
+            
 
         </>
 
@@ -20,3 +22,12 @@ export default function MemberPage() {
 
 }
 
+const mapStateToProps = state => {
+
+    return {
+      members: state.members,
+      loading: state.loading
+    }
+  }
+
+  export default connect(mapStateToProps)(MemberPage)

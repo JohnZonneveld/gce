@@ -9,7 +9,7 @@ export default function About() {
             <h1>About</h1>
 
             <p>
-                The club was founded in november 1st 2001 and we are a no cost and
+                The club was founded in November 1st, 2001 and we are a no cost and
                 volunteer group!!!
             </p>
             <div>

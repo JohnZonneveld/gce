@@ -6,13 +6,13 @@ export default function EventList() {
 
     return (
 
-        <>
+        <div className="content">
 
-            <h1>These are the Members of the Board</h1>
+            <h1>These are the our Events</h1>
 
-            <p>Board members listing</p>
+            <p>event</p>
 
-        </>
+        </div>
 
     );
 

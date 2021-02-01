@@ -45,7 +45,7 @@ class App extends Component {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/about' component={About}/>
           <Route exact path='/members/:id' component={MemberPage} />
-          {/* <Route exact path='/members' props={this.state} component={MemberList} /> */}
+          
           <Route path="/members" render={props => 
             (<MemberList {...props} members={this.props.members}/>)
 }/>

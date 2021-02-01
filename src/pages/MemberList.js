@@ -1,27 +1,20 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux'
-
-// import { useParams } from 'react-router-dom';
 
 class MemberList extends Component {
 
-    membersList = () => {
-        return this.props.members.map(
-
-            member => {
-                <div>
-                    <p>{member.name}</p>
-                </div>
-            }
-                
-        )
-    }
     render() {
+
         return (
-            <div>
-                {}
-            </div>
-        )
+        <>
+        <h1>Members List</h1>
+        <p>Here is a listing of our members:</p>
+        <ul>
+        {this.props.members.map((member, index) => (
+            <li key={index}> {member.name}, {member.bike}</li>
+        ))}
+        </ul>
+        </>);
+        
     }
 
 }

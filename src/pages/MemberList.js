@@ -1,7 +1,16 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux"
+import {fetchMembers} from '../actions/memberActions'
 import { Link } from "react-router-dom"
 
+// import reducer from '../reducers/reducer'
+
+
 class MemberList extends Component {
+
+    componentDidMount() {
+        this.props.fetchMembers()
+    }
 
     render() {
 
@@ -15,7 +24,9 @@ class MemberList extends Component {
                         <li key={member.id}>  
                             <Link to={{
                                 pathname:"/members/" + member.id,
-                                props: { members: member} 
+                                state: { 
+                                    detailedMember: member
+                                } 
                             }}>
                                 {member.name}
                             </Link>
@@ -27,4 +38,12 @@ class MemberList extends Component {
 }
 }
 
-export default MemberList
+const mapStateToProps = state => {
+
+    return {
+      members: state.members,
+      loading: state.loading
+    }
+  }
+
+export default connect(mapStateToProps, {fetchMembers})(MemberList)

@@ -20,19 +20,19 @@ import { fetchMembers } from './actions/memberActions'
 
 class App extends Component {
 
-  componentDidMount() {
-    console.log(this.props)
-    this.props.fetchMembers()
-  }
+  // componentDidMount() {
+  //   console.log(this.props)
+  //   this.props.fetchMembers()
+  // }
 
-  memberHandling = () => {
-    console.log(this.props.loading)
-    if (this.props.loading) {
-      return <div>Getting Members....</div>
-    } else {
-      return < MemberList memberList={this.props.members} />
-    }
-  }
+  // memberHandling = () => {
+  //   console.log(this.props.loading)
+  //   if (this.props.loading) {
+  //     return <div>Getting Members....</div>
+  //   } else {
+  //     return < MemberList memberList={this.props.members} />
+  //   }
+  // }
 
   render() 
   
@@ -45,10 +45,8 @@ class App extends Component {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/about' component={About}/>
           <Route exact path='/members/:id' component={MemberPage} />
-          
-          <Route path="/members" render={props => 
-            (<MemberList {...props} members={this.props.members}/>)
-}/>
+          <Route exact path='/members' component={MemberList} />
+
           <Route exact path='/events' component={EventList} />
 
         </Switch>

@@ -8,7 +8,7 @@ class MemberPage extends Component {
         console.log({member})
         return (
             <div className="content">
-                <h1>Member Info {searchId} {member.name}</h1>
+                <h1>Member Info: {member.name}</h1>
                 <table>
                     <tr>
                         <td>
@@ -67,6 +67,7 @@ class MemberPage extends Component {
                 </table>
             </div>
         );
+        <input type="button"></input>
     } 
     
     

@@ -12,7 +12,7 @@ function Header() {
         <Row >
             <Col className="logoLeft"><GtrFront /></Col>
             <Col className="logoMargin"><Logo /></Col>
-            <Col>counter</Col>
+            <Col></Col>
         </Row>
         </Container>
     )

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import logo from './logo.svg';
 import './App.css';
 import { Route, Switch } from 'react-router-dom'
 import HomePage from './pages/HomePage'
@@ -12,27 +11,10 @@ import NavBar from './components/NavBar';
 import Footer from './containers/Footer'
 
 import { connect } from 'react-redux'
-// import { Provider } from 'react-redux';
-// import thunk from 'redux-thunk';
-// import reducer from './reducers';
 import { fetchMembers } from './actions/memberActions'
 
 
 class App extends Component {
-
-  // componentDidMount() {
-  //   console.log(this.props)
-  //   this.props.fetchMembers()
-  // }
-
-  // memberHandling = () => {
-  //   console.log(this.props.loading)
-  //   if (this.props.loading) {
-  //     return <div>Getting Members....</div>
-  //   } else {
-  //     return < MemberList memberList={this.props.members} />
-  //   }
-  // }
 
   render() 
   
@@ -50,7 +32,7 @@ class App extends Component {
           <Route exact path='/events' component={EventList} />
 
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
         </>
       );}
 

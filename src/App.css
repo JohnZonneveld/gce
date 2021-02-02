@@ -67,6 +67,7 @@ div.logoMargin {
 
 .content {
   margin-left: 40px;
+  margin-top: 20px;
   padding-top: 10px;
   max-height: 450px;
   overflow-y: scroll;
